@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        PrintWriter pw = new PrintWriter("Хинкалы-аварские.txt");
+        PrintWriter hink = new PrintWriter("Хинкалы-аварские.txt");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Рецепт хинкалов аварских");
@@ -48,17 +48,17 @@ public class Main {
 
         System.out.println("ВАШИ ИНГРИДИЕНТЫ В СТУДИЮ:");
 
-        pw.println("Рецепт хинкалов:\n1. Говядина(мякоть): " + govyadina + " грамм\n2. Вода: " + voda +
+        hink.println("Рецепт хинкалов:\n1. Говядина(мякоть): " + govyadina + " грамм\n2. Вода: " + voda +
                 " грамм\n3. Лук (нарезанный): " + luk + " штук\n4. Чеснок: " + chesnok1 + " штук\n5. Лавровый лист: " +
                 list + " штук\n6. Перец горошком (черный): " + perec + " штук\n7. Соль: " + sol1 + " грамм\n");
-        pw.println("Для теста:\n1. Кефир: " + kefir + " мл\n2. Пшеничная мука: " + muka +
+        hink.println("Для теста:\n1. Кефир: " + kefir + " мл\n2. Пшеничная мука: " + muka +
                 " грамм\n3. Сода 1 чайная ложка: " + soda + " грамм\n4. Соль: " + sol2 + " грамм\n");
-        pw.println("Для соуса:\n1. Сметана: " + smetana + " грамм\n2. Чеснок: " + chesnol2 +
+        hink.println("Для соуса:\n1. Сметана: " + smetana + " грамм\n2. Чеснок: " + chesnol2 +
                 " штук\n3. Петрушка: " + petrushka + " грамм\n4. Соль: " + sol3 + " грамм\n");
 
         String hinkali = scanner.nextLine();
-        pw.println("Инструкция по приготовлению хинкалов: " + hinkali);
-        pw.close();
+        hink.println("Инструкция по приготовлению хинкалов: " + hinkali);
+        hink.close();
 
         Scanner scanner2 = new Scanner(new File("Хинкалы-аварские.txt"));
         while (scanner2.hasNextLine()) {
